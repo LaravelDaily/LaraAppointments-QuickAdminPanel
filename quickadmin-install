@@ -1,0 +1,18 @@
+<?php
+/**
+ * We are simply calling the commands you normally would.
+ */
+echo "Copying .env file from .env.example\n";
+file_exists('.env') || copy('.env.example', '.env');
+echo "Running composer install...\n";
+exec("composer install");
+echo "Composer packages installed...\n";
+echo "Running migrations and seeds...\n";
+exec("php artisan migrate --seed");
+echo "Migrations and seeds completed...\n";
+echo "Generating app key...\n";
+exec("php artisan key:generate");
+echo "App key generated...\n";
+echo "\n\n";
+
+echo "Your installation completed!\nLogin using:\nUsername: admin@admin.com\nPassword: password\n\nHave a nice day!";
