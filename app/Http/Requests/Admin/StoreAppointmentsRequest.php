@@ -26,7 +26,6 @@ class StoreAppointmentsRequest extends FormRequest
             'client_id' => 'required',
             'employee_id' => 'required',
             'start_time' => 'required|date_format:'.config('app.date_format').' H:i:s',
-            'finish_time' => 'date_format:'.config('app.date_format').' H:i:s',
         ];
     }
 }

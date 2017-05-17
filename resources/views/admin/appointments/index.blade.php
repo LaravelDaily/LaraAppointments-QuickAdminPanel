@@ -112,6 +112,9 @@
                     {
                         title : '{{ $appointment->client->first_name . ' ' . $appointment->client->last_name }}',
                         start : '{{ $appointment->start_time }}',
+                        @if ($appointment->finish_time)
+                                end: '{{ $appointment->finish_time }}',
+                        @endif
                         url : '{{ route('admin.appointments.edit', $appointment->id) }}'
                     },
                     @endforeach
