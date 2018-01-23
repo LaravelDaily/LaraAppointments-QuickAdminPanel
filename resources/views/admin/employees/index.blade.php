@@ -26,6 +26,7 @@
                         <th>@lang('quickadmin.employees.fields.last-name')</th>
                         <th>@lang('quickadmin.employees.fields.phone')</th>
                         <th>@lang('quickadmin.employees.fields.email')</th>
+						<th>@lang('quickadmin.employees.fields.services')</th>
                         <th>&nbsp;</th>
                     </tr>
                 </thead>
@@ -42,6 +43,11 @@
                                 <td>{{ $employee->last_name }}</td>
                                 <td>{{ $employee->phone }}</td>
                                 <td>{{ $employee->email }}</td>
+								<td>
+								@foreach($employee->services as $service)
+								<span class="label label-success">{{ $service->name }}</span>
+								@endforeach
+								</td>								
                                 <td>
                                     @can('employee_view')
                                     <a href="{{ route('admin.employees.show',[$employee->id]) }}" class="btn btn-xs btn-primary">@lang('quickadmin.qa_view')</a>

@@ -109,5 +109,10 @@ class Appointment extends Model
     {
         return $this->belongsTo(Employee::class, 'employee_id')->withTrashed();
     }
+	
+    public function service()
+    {
+        return $this->belongsTo(Service::class, 'service_id')->withTrashed();
+    }	
     
 }

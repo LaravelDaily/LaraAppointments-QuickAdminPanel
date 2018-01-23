@@ -38,7 +38,7 @@ class WorkingHoursController extends Controller
             return abort(401);
         }
         $relations = [
-            'employees' => \App\Employee::get()->pluck('first_name', 'id')->prepend('Please select', ''),
+            'employees' => \App\Employee::get(),
         ];
 
         return view('admin.working_hours.create', $relations);

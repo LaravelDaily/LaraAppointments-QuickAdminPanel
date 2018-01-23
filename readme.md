@@ -3,7 +3,7 @@
 It is a demo project for demonstrating what can be generated with [QuickAdminPanel](https://quickadminpanel.com) tool.
 LaraAppointments is all generated with __QuickAdmin__ except for custom code for __Calendar__ functionality.
 
-![Larancer screenshot](http://webcoderpro.com/laraappointments-demo.png)
+![Laravel appointments screenshot](http://webcoderpro.com/laraappointments-demo.png)
 
 ## How to use
 

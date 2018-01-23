@@ -39,6 +39,14 @@
                 </a>
             </li>
             @endcan
+            @can('service_access')
+            <li class="{{ $request->segment(2) == 'services' ? 'active' : '' }}">
+                <a href="{{ route('admin.services.index') }}">
+                    <i class="fa fa-hourglass"></i>
+                    <span class="title">@lang('quickadmin.services.title')</span>
+                </a>
+            </li>
+            @endcan			
             
             @can('appointment_access')
             <li class="{{ $request->segment(2) == 'appointments' ? 'active' : '' }}">

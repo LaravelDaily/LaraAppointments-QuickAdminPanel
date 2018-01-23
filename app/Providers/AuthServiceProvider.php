@@ -66,6 +66,23 @@ class AuthServiceProvider extends ServiceProvider
         Gate::define('user_delete', function ($user) {
             return in_array($user->role_id, [1]);
         });
+		
+        // Auth gates for: Services
+        Gate::define('service_access', function ($user) {
+            return in_array($user->role_id, [1]);
+        });
+        Gate::define('service_create', function ($user) {
+            return in_array($user->role_id, [1]);
+        });
+        Gate::define('service_edit', function ($user) {
+            return in_array($user->role_id, [1]);
+        });
+        Gate::define('service_view', function ($user) {
+            return in_array($user->role_id, [1]);
+        });
+        Gate::define('service_delete', function ($user) {
+            return in_array($user->role_id, [1]);
+        });		
 
         // Auth gates for: Clients
         Gate::define('client_access', function ($user) {

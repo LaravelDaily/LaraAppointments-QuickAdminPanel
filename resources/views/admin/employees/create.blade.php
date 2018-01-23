@@ -58,6 +58,18 @@
                     @endif
                 </div>
             </div>
+            <div class="row">
+                <div class="col-xs-12 form-group">
+                    {!! Form::label('service_id', 'Services*', ['class' => 'control-label']) !!}
+                    {!! Form::select('service_id', $services, null, ['class' => 'form-control select2', 'required' => '', 'multiple' => '', 'name' => 'services[]']) !!}
+                    <p class="help-block"></p>
+                    @if($errors->has('service_id'))
+                        <p class="help-block">
+                            {{ $errors->first('service_id') }}
+                        </p>
+                    @endif
+                </div>
+            </div>			
             
         </div>
     </div>

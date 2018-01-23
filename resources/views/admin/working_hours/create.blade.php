@@ -13,7 +13,12 @@
             <div class="row">
                 <div class="col-xs-12 form-group">
                     {!! Form::label('employee_id', 'Employee*', ['class' => 'control-label']) !!}
-                    {!! Form::select('employee_id', $employees, old('employee_id'), ['class' => 'form-control select2', 'required' => '']) !!}
+					<select name="employee_id" id="employee_id" value="{{ old('employee_id') }}" class="form-control" required>
+						<option value="">Please select</option>
+						@foreach($employees as $employee)
+						<option value="{{ $employee->id }}">{{ $employee->first_name }} {{ $employee->last_name }}</option>
+						@endforeach
+					</select>
                     <p class="help-block"></p>
                     @if($errors->has('employee_id'))
                         <p class="help-block">
