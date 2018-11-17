@@ -10,7 +10,7 @@ LaraAppointments is all generated with __QuickAdmin__ except for custom code for
 - __Email__: admin@admin.com
 - __Pass__: password
 
-![Laravel appointments screenshot](http://webcoderpro.com/laraappointments-demo.png)
+![Laravel appointments screenshot](https://quickadminpanel.com/assets/pages/demos/demo-appointments-01.png)
 
 ## How to use
 
